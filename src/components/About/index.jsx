@@ -24,10 +24,10 @@ const About = () => {
     animate={{opacity:1}}
     exit={{opaticy:0}}
     >
+    <AboutContainer>
         <VideoContainer>
             <VideoBg autoPlay={true} loop muted src={Video} type='video/mp4'/>
          </VideoContainer>
-    <AboutContainer>
         <Glass>
             <Title>About me</Title>
               <Content>

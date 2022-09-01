@@ -58,11 +58,11 @@ const Projects = () => {
 
     style
     >
+
+   <ProjectsContainer>
        <VideoContainer>
             <VideoBg autoPlay={true} loop muted src={Video} type='video/mp4'/>
          </VideoContainer>
-
-   <ProjectsContainer>
 <Glass>
   
       <TitleContainer>

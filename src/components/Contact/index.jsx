@@ -41,11 +41,11 @@ const Contact = () => {
    animate={{opacity:1}}
    exit={{opaticy:0}}
    >
-     <VideoContainer>
-            <VideoBg autoPlay={true} loop muted src={Video} type='video/mp4'/>
-         </VideoContainer>
 
     <ContactContainer>
+         <VideoContainer>
+            <VideoBg autoPlay={true} loop muted src={Video} type='video/mp4'/>
+         </VideoContainer>
         <Glass>
             <Text>
                 <TextOne>Contact Me</TextOne>
