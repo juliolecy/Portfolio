@@ -41,7 +41,6 @@ const Contact = () => {
    animate={{opacity:1}}
    exit={{opaticy:0}}
    >
-
     <ContactContainer>
          <VideoContainer>
             <VideoBg autoPlay={true} loop muted src={Video} type='video/mp4'/>
