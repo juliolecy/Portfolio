@@ -9,6 +9,7 @@ padding: 0 3px;
 height: 800px;
 position: relative;
 z-index: 1;
+overflow: hidden;
 `
 
 export const HeroBg = styled.div`
@@ -19,7 +20,6 @@ right: 0;
 bottom: 0;
 width: 100%;
 height: 100%;
-overflow: hidden;
 `
 
 export const VideoBg = styled.video`
@@ -41,12 +41,23 @@ export const HeroContent = styled.div`
   top:40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  white-space: nowrap;
+
+ 
 `
 
 export const HeroSpan = styled.span`
 font-family: 'Montserrat', sans-serif;
   color: #fff;
   font-size: 2rem;
+
+    @media screen and (max-width: 680px){
+    font-size: 1.5rem;
+  }
+
+  @media screen and (max-width: 500px){
+    font-size: 1rem;
+  }
 `
 
 export const StrokeText = styled.span`
@@ -68,17 +79,17 @@ export const HeroGlitch = styled.h1`
 
     &:after{
       padding: 30px;
-  color: white;
-  content: attr(data-text);
-  position: absolute;
-  max-width: 100%;
-  max-height: 100%;
-  background: rgba(0, 0, 0, 0);
-  overflow: hidden;
-  top: 0;
-    left: -3px;
-  text-shadow: -2px 0 rgb(0, 0, 0);
-  animation: glitch-2 2s linear infinite reverse;
+      color: white;
+      content: attr(data-text);
+      position: absolute;
+      max-width: 100%;
+      max-height: 100%;
+      background: rgba(0, 0, 0, 0);
+      overflow: hidden;
+      top: 0;
+        left: -3px;
+      text-shadow: -2px 0 rgb(0, 0, 0);
+      animation: glitch-2 2s linear infinite reverse;
     }
 
     &:before{
@@ -226,6 +237,18 @@ export const HeroGlitch = styled.h1`
       clip: rect(83px, auto, 40px, 30px);
     }
   };
+
+     @media screen and (max-width: 680px){
+    font-size: 2rem;
+  }
+
+  @media screen and (max-width: 500px){
+    font-size: 1.5rem;
+  }
+
+  @media screen and (max-width: 366px){
+    font-size: 1.2rem;
+  }
 `
 
 export const BtnContainer = styled.div`
@@ -285,17 +308,14 @@ export const SMContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: flex-end;
+  align-items: center;
   z-index: 1;
   position: absolute;
-  right: 0;
+  top: 35%;
+  right: 5%;
+   @media screen and (max-width: 966px){
+    display: none
+  }
 `
-export const SM = styled.ul`
-  margin-top: 300px;
-  `
-export const SMItem = styled.li`
-    margin-right: 30px;
-  width: 70px;
-  color: #fff;
-`
+
 export const SMLink = styled.a``

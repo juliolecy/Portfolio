@@ -1,6 +1,10 @@
-import React from 'react'
+import React, {useRef} from 'react'
+import emailjs from 'emailjs-com'
 import {motion} from 'framer-motion'
+import Video from '../../assets/videos/video4.mp4'
 import {ContactContainer,
+VideoContainer,
+VideoBg,
 Text,
 TextOne,
 TextTwo,
@@ -18,14 +22,29 @@ Glass
 } from './ContactElements'
 import {MdOutlineEmail} from 'react-icons/md'
 import {BsWhatsapp} from 'react-icons/bs'
+import {TbBrandTelegram} from 'react-icons/tb'
 
 const Contact = () => {
+
+    const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_f3fprlr', 'template_0i20kvo', form.current, '7m_mqpOURjjtEgYDd')
+            e.target.reset();
+  }
+
   return (
      <motion.div
    initial={{opacity:0}}
    animate={{opacity:1}}
    exit={{opaticy:0}}
    >
+     <VideoContainer>
+            <VideoBg autoPlay={true} loop muted src={Video} type='video/mp4'/>
+         </VideoContainer>
+
     <ContactContainer>
         <Glass>
             <Text>
@@ -35,25 +54,19 @@ const Contact = () => {
             <ContactContainer2>
                 <ContactOptions>
                     <ContactOption>
-                        <MdOutlineEmail size={30} />
-                        <Title>Email</Title>
-                        <Name>juliocesar_19@hotmail.com.br</Name>
-                        <To href='mailto:juliocesar_19@hotmail.com.br' target='_blank'>Send a message</To>
+                        <To href='mailto:juliocesar_19@hotmail.com.br' target='_blank'><MdOutlineEmail size={30}/></To>
                     </ContactOption>
+
                     <ContactOption>
-                        <MdOutlineEmail/>
-                        <Title>Email</Title>
-                        <Name>juliocesar_19@hotmail.com.br</Name>
-                        <To href='mailto:juliocesar_19@hotmail.com.br'>Send a message</To>
+                        <To href='mailto:juliocesar_19@hotmail.com.br'>  <TbBrandTelegram size={30}/> </To>
                     </ContactOption>
+
                     <ContactOption>
-                        <BsWhatsapp/>
-                        <Title>Whatsapp</Title>
-                        <Name>+55 21 986739047</Name>
-                        <To href='https://api.whatsapp.com/send?phone=5521986739047&text=Ol%C3%A1%2C%20me%20envie%20uma%20mensagem' target='_blank'>Send a message</To>
+                        <To href='https://api.whatsapp.com/send?phone=5521986739047&text=Ol%C3%A1%2C%20me%20envie%20uma%20mensagem' target='_blank'><BsWhatsapp size={30}/></To>
                     </ContactOption>
+
                 </ContactOptions>
-                <Form action="">
+                <Form ref={form} onSubmit={sendEmail}>
                     <Input type='text' name='name' placeholder='Your name' required/>
                     <Input type='email' name='email' placeholder='Your email' required/>
                     <Textarea name="message"  rows="7" placeholder="Your message here"></Textarea>

@@ -1,11 +1,26 @@
 import styled from 'styled-components'
 import img from '../../assets/images/img2.jpg'
 
+export const VideoContainer = styled.div`
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+width: 100%;
+height: 100%;
+`
+
+export const VideoBg = styled.video`
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  background: #232a34;
+`
+
 export const ContactContainer = styled.div`
-background: url(${img});
-background-repeat: no-repeat;
-background-position: center;
-background-size: cover;
+
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -13,12 +28,14 @@ justify-content: center;
 color: white; 
 width: 100%;
 height: 100vh;
+
+
 `
 
 export const Glass = styled.div`
 width: 90%;
-height: 400px;
-padding: 15px 35px;
+height: 500px;
+padding: 15px 15px;
 backdrop-filter: blur(5px) ;
 -webkit-backdrop-filter: blur(5px);
 font-family:  'Montserrat', sans-serif;
@@ -46,20 +63,18 @@ export const TextTwo = styled.span`
 font-size: 1.5rem;
 `
 export const ContactContainer2 = styled.div`
-max-width: 600px;
-display: flex;
-flex-direction: row;
+max-width: 100%;
+width: 100%;
+height: 80%;
+display: grid;
+grid-template-columns: 1fr 2fr;
 justify-content: center;
 gap: 12%;
 
-    @media screen and (max-width: 1024px){
-        grid-template-columns: fr;
-        gap:2rem;
+    @media screen and (max-width: 768px){
+        grid-template-columns: 1fr;
     }
-
-     @media screen and (max-width: 600px){
-
-    }   
+ 
 `
 
 export const ContactOptions = styled.div`
@@ -68,6 +83,10 @@ flex-direction: column;
 align-items: center;
 gap: 1.2rem;
 justify-content: center;
+
+@media screen and (max-width: 768px){
+        display: none;
+    }
 `
 export const ContactOption = styled.div`
 width: 100%;
@@ -113,13 +132,17 @@ color: white;
 `
 
 export const Form = styled.form`
-width: 450px;
+width: 100%;
 display: flex;
 flex-direction: column;
 gap: 1.2rem;
+
+@media screen and (max-width: 500px){
+       width: 100%;
+    }
 `
 export const Input = styled.input`
-width: 450px;
+width: 100%;
 padding: 1.5rem;
 border-radius: 15px;
 background: transparent;
@@ -136,4 +159,43 @@ border: 2px solid white;
 resize: none;
 color:white;
 `
-export const Button = styled.button``
+export const Button = styled.button`
+cursor: pointer;
+width: 150px;
+    height: 50px;
+    border: none;
+    color: #fff;
+    transition: ease-out .3s;
+    font-size: 1.2rem;
+    outline: none;
+    border: 3px solid #ffffff;
+    position: relative;
+    z-index: 1;
+    background: transparent;
+
+    &:hover{
+        cursor: pointer;
+    color: black;  
+    }
+
+    &:before{
+        color: black;
+    transition: .5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: #ffffff;
+    }
+
+    &:hover:before{
+        transition: all ease .5s;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+    }
+`

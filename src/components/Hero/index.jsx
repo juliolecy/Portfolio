@@ -1,5 +1,6 @@
 import React from 'react'
 import {motion} from 'framer-motion'
+import Cv from '../../assets/data/curriculo.pdf'
 import {HeroContainer, 
    VideoBg, 
    HeroBg, 
@@ -9,10 +10,9 @@ import {HeroContainer,
    StrokeText,
    BtnContainer,
    HeroBtn, 
-   SMItem, 
    SMContainer, 
    SMLink, 
-   SM} from './HeroElements.js'
+   } from './HeroElements.js'
 import Video from '../../assets/videos/VideoBg.mp4'
 import {TiSocialLinkedinCircular} from 'react-icons/ti'
 import {AiFillGithub} from 'react-icons/ai'
@@ -27,8 +27,9 @@ const  Hero= () => (
    >
       <HeroContainer>
          <HeroBg>
-            <VideoBg autoPlay={false} loop muted src={Video} type='video/mp4'/>
+            <VideoBg autoPlay={true} loop muted src={Video} type='video/mp4'/>
          </HeroBg>
+         
          <HeroContent>
             <HeroSpan>Hi</HeroSpan>
             <HeroSpan>My name is <StrokeText>Julio Cesar</StrokeText></HeroSpan>
@@ -37,14 +38,15 @@ const  Hero= () => (
          </HeroContent>
       
          <BtnContainer>
-            <HeroBtn> Download CV</HeroBtn>
+            <a href={Cv} download={true} type='application/pdf'>
+               <HeroBtn> Download CV</HeroBtn>
+             </a>
          </BtnContainer>
+               
       
          <SMContainer>
-            <SM>
-               <SMItem> <SMLink href='#'> <TiSocialLinkedinCircular size={70} style={{color: '#fff'}} /></SMLink> </SMItem>
-               <SMItem> <SMLink href='#'><AiFillGithub size={60} style={{color: '#fff'}} /></SMLink></SMItem>
-            </SM>
+                <SMLink href='https://www.linkedin.com/in/jlins/'> <TiSocialLinkedinCircular size={70} style={{color: '#fff'}} /></SMLink>
+                <SMLink href='https://github.com/juliolecy'><AiFillGithub size={60} style={{color: '#fff'}} /></SMLink>
          </SMContainer>
       
       </HeroContainer>

@@ -1,9 +1,12 @@
 import React from 'react'
 import {motion} from 'framer-motion'
-import profile from '../../assets/images/node.png'
+import profile from '../../assets/images/profile.png'
+import Video from '../../assets/videos/video3.mp4'
 //import {TiSocialLinkedinCircular} from 'react-icons/ti'
 //import {AiFillGithub} from 'react-icons/ai'
-import {AboutContainer,
+import {VideoContainer,
+  VideoBg,
+  AboutContainer,
     Glass,
     Title,
     ProfileContainer,
@@ -21,6 +24,9 @@ const About = () => {
     animate={{opacity:1}}
     exit={{opaticy:0}}
     >
+        <VideoContainer>
+            <VideoBg autoPlay={true} loop muted src={Video} type='video/mp4'/>
+         </VideoContainer>
     <AboutContainer>
         <Glass>
             <Title>About me</Title>
@@ -30,7 +36,13 @@ const About = () => {
                 </ProfileContainer>
                 <ApresentationContainer>
                     <Apresentation>
-                      My name ins Julio Cesar as sair before. In 2021...
+                    My name is Julio Cesar, I'm from São Gonçalo, Rio de Janeiro.
+                    <br/>
+                     In 2019, when I was military in the Brazilian Air Force, in one of the classes I had my first contact with Java programming.  
+                   
+                     In 2022, after my decision to leave this profession, I restarted my studies, this time with Javascript.
+                     <br />
+                    Nowadays, I work with React, Node, Phyton and I focus on becoming a fullstack developer 
                     </Apresentation>
                 </ApresentationContainer>
               </Content>

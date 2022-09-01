@@ -9,8 +9,8 @@ const Footer = () => {
         <FooterLogo>JLINS</FooterLogo>
         <FooterSpan>JLins © 2022 All rights reserved. </FooterSpan>
         <FooterSM>
-            <SMLink href='#'> <TiSocialLinkedinCircular size={50} style={{color: '#fff'}} /></SMLink> 
-            <SMLink href='#'><AiFillGithub size={40} style={{color: '#fff'}} /></SMLink>
+            <SMLink href='https://www.linkedin.com/in/jlins/'> <TiSocialLinkedinCircular size={50} style={{color: '#fff'}} /></SMLink> 
+            <SMLink href='https://github.com/juliolecy'><AiFillGithub size={40} style={{color: '#fff'}} /></SMLink>
         </FooterSM>
     </FooterContainer>
   )
