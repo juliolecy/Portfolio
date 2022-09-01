@@ -1,11 +1,11 @@
-import {Route, Routes, useLocation} from 'react-router-dom'
-
 import React from 'react'
-import Hero from '../Hero'
-import About from '../About'
-import Projects from '../Projects'
-import Contact from '../Contact'
-import Error from '../Error'
+import {Route, Routes, useLocation} from 'react-router-dom'
+//Pages
+import Hero from '../../pages/Hero'
+import About from '../../pages/About'
+import Projects from '../../pages/Projects'
+import Contact from '../../pages/Contact'
+import Error from '../../pages/Error'
 
 import {AnimatePresence} from 'framer-motion'
 
