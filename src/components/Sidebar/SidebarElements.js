@@ -61,6 +61,7 @@ export const SidebarLink = styled(LinkRouter)`
     color: #fff;
     cursor: pointer;
     width: 200px;
+    margin-bottom: 25px;
 
     &:hover{
         color: black;

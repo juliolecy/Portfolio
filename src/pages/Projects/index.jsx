@@ -42,12 +42,12 @@ const Projects = () => {
   const handleLeft = (e)=>{
     e.preventDefault()
     console.log(carousel.current.offsetWidth)
-    carousel.current.scrollLeft -= (carousel.current.offsetWidth/3)
+    carousel.current.scrollLeft -= (carousel.current.offsetWidth/2)
   }
   const handleRight = (e)=>{
     e.preventDefault()
     console.log(carousel.current.offsetWidth)
-    carousel.current.scrollLeft += (carousel.current.offsetWidth/3)
+    carousel.current.scrollLeft += (carousel.current.offsetWidth/2)
   }
   
   return (
@@ -186,11 +186,6 @@ const Projects = () => {
         <Arrow onClick={handleRight}><TiArrowRightOutline size={40} style={{color: '#fff'}}/></Arrow>
       </ProjectsCarousel>
   
-  
-  
-      <ArrowContainer>
-  
-      </ArrowContainer>
 </Glass>
    </ProjectsContainer>
    </motion.div>

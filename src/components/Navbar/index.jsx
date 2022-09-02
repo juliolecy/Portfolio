@@ -17,6 +17,9 @@ const  Navbar = ({toggle, scrolled}) => {
             </Hamburguer>
 
             <NavMenu>
+            <NavItem>
+                <NavLinks to='/'>Home</NavLinks>
+              </NavItem>
               <NavItem>
                 <NavLinks to='/projects'>Projects</NavLinks>
               </NavItem>

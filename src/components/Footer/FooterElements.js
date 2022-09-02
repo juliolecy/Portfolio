@@ -10,6 +10,8 @@ export const FooterContainer = styled.footer`
 
     @media screen and (max-width:768px){
         flex-direction: column;
+        justify-content: center;
+        text-align: center;
     }
 `
 
@@ -47,6 +49,7 @@ export const FooterLogo = styled.h1`
 export const FooterSpan = styled.span`
 color:#fff;
 font-size: 1.4rem;
+font-family: 'Playfair Display', serif;
   @media screen and (max-width:768px){
     margin-bottom:15px;
     }

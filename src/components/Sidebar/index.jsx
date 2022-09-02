@@ -10,6 +10,7 @@ const Sidebar = ({toggle, Open}) => {
 
         <SidebarWrapper>
             <SidebarMenu>
+                <SidebarLink  to='/'>Home</SidebarLink>
                 <SidebarLink  to='/projects'>Projects</SidebarLink>
                 <SidebarLink  to='/about'>About</SidebarLink>
                 <SidebarLink  to='/contact'>Contact</SidebarLink>

@@ -60,12 +60,29 @@ export const Title = styled.h1`
     font-size: 2.5rem;
     margin-bottom: 10px;
     font-family:  'Montserrat', sans-serif;
+
+    @media screen and (max-width:600px){
+      font-size: 2rem;
+    }
+
+    @media screen and (max-width:360px){
+      font-size: 1.7rem;
+    }
+
     `
 
 export const Description = styled.span` 
     font-size: 1.5rem;
     font-family:  'Montserrat', sans-serif;
     margin-bottom: 10px;
+
+    @media screen and (max-width:600px){
+      font-size: 1rem;
+    }
+
+    @media screen and (max-width:360px){
+      font-size: 1rem;
+    }
 `
 
 export const ProjectsCarousel=styled.div`
@@ -135,6 +152,10 @@ border: none;
 &:hover{
     transform: scale(1.1);
 }
+
+@media screen and (max-width:600px){
+       display: none;
+    }
 `
 export const ArrowRight = styled.img`
 cursor: pointer;
@@ -163,4 +184,26 @@ transition: .5s;
     &:hover ${ImageContainer}{
         opacity: 0;
     }
+
+    @media screen and (max-width:900px){
+        width: 250px;
+        height: 250px;
+    }
+
+     @media screen and (max-width:782px){
+        width: 200px;
+        height: 200px;
+    }
+
+    @media screen and (max-width:600px){
+       // width: 150px;
+        //height: 150px;
+    }
+
+    @media screen and (max-width:360px){
+        width: 150px;
+        height: 150px;
+    }
+
+    
 ` 
