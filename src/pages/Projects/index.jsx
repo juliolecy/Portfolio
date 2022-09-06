@@ -84,8 +84,8 @@ const Projects = () => {
                 Netflix clone
               </ProjectTitle>
   
-              <Links href='https://jlins-netflixclone.netlify.app/'> <HiOutlineExternalLink size={40} style={{color: '#fff'}}/> </Links>
-              <Links href='https://github.com/juliolecy/Netflix-clone'>
+              <Links target="_blank" href='https://jlins-netflixclone.netlify.app/'> <HiOutlineExternalLink size={40} style={{color: '#fff'}}/> </Links>
+              <Links target="_blank" href='https://github.com/juliolecy/Netflix-clone'>
             <AiFillGithub size={40} style={{color: '#fff'}}/>
               </Links>
             </Content>
@@ -101,9 +101,10 @@ const Projects = () => {
                 Bank app
               </ProjectTitle>
   
-              <Links href='https://jlins-bankapp.netlify.app/'> <HiOutlineExternalLink style={{color: '#fff'}}/> </Links>
+              <Links target="_blank" href='https://jlins-bankapp.netlify.app/'>
+                 <HiOutlineExternalLink size={40} style={{color: '#fff'}}/> </Links>
   
-              <Links href='https://github.com/juliolecy/bank-app'>
+              <Links target="_blank" href='https://github.com/juliolecy/bank-app'>
             <AiFillGithub size={40} style={{color: '#fff'}}/>
               </Links>
             </Content>
@@ -119,7 +120,7 @@ const Projects = () => {
                 Food Delivery
               </ProjectTitle>
   
-              <Links href='https://github.com/juliolecy/food-delivery'>
+              <Links target="_blank" href='https://github.com/juliolecy/food-delivery'>
             <AiFillGithub size={40} style={{color: '#fff'}}/>
               </Links>
             </Content>
@@ -136,9 +137,10 @@ const Projects = () => {
                 CRF page transitions
               </ProjectTitle>
   
-              <Links href='https://flamengoatemorrer.netlify.app/'> <HiOutlineExternalLink size={40} style={{color: '#fff'}}/> </Links>
+              <Links target="_blank" href='https://flamengoatemorrer.netlify.app/'> 
+              <HiOutlineExternalLink size={40} style={{color: '#fff'}}/> </Links>
   
-              <Links href='https://github.com/juliolecy/flamengo-page-transitions'>
+              <Links target="_blank" href='https://github.com/juliolecy/flamengo-page-transitions'>
             <AiFillGithub size={40} style={{color: '#fff'}}/>
               </Links>
             </Content>
@@ -153,7 +155,7 @@ const Projects = () => {
               <ProjectTitle>
                 Contact book
               </ProjectTitle>
-              <Links href='https://github.com/juliolecy/contact-book'>
+              <Links target="_blank" href='https://github.com/juliolecy/contact-book'>
             <AiFillGithub size={40} style={{color: '#fff'}}/>
               </Links>
             </Content>
@@ -168,10 +170,10 @@ const Projects = () => {
               <ProjectTitle>
                 Landing Page
               </ProjectTitle>
-              <Links href='https://jlins-connectsite.netlify.app/'>
+              <Links target="_blank" href='https://jlins-connectsite.netlify.app/'>
             <HiOutlineExternalLink size={40} style={{color: '#fff'}}/>
               </Links>
-              <Links href='
+              <Links target="_blank" href='
                 github.com/juliolecy/Projeto-9-Aprendendo-Bootstrap
   .'>
             <AiFillGithub size={40} style={{color: '#fff'}}/>

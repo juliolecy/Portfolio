@@ -121,7 +121,7 @@ font-size: 1.9rem;
 }
 
 @media screen and (max-width: 435px){
-        font-sze: 1rem;
+        font-size: 1rem;
 
 }
 

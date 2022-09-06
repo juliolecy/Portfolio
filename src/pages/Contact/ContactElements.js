@@ -69,8 +69,8 @@ width: 100%;
 height: 80%;
 display: grid;
 grid-template-columns: 1fr 2fr;
-justify-content: center;
-gap: 12%;
+gap: 6%;
+padding: 15px 35px;
 
     @media screen and (max-width: 768px){
         grid-template-columns: 1fr;
@@ -101,7 +101,7 @@ border-radius: 12px;
 border: none;
 padding: 15px;
 color: white;
-background: #3B0F81;
+background: transparent;
 transition: .5s;
 border: 1px solid white;
 
