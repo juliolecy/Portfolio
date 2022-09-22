@@ -24,7 +24,7 @@ export const ProjectsArray: Array<Projects> = [
         deploy: 'https://jlins-netflixclone.netlify.app',
         tech: ['Javascript', 'HTML',  'CSS', 'Typescript'],
         description: 'Projeno no qual clono a interface da Netflix',
-        git: 'www.github.com'
+        git: 'https://github.com/juliolecy/Netflix-clone'
     },
     { id:2,
         title:'BankApp',
@@ -32,7 +32,7 @@ export const ProjectsArray: Array<Projects> = [
         deploy: 'https://jlins-bankapp.netlify.app',
         tech:['Javascript', 'React',  'Tailwind', 'Typescript',],
         description: 'Landing page de um banco fictício',
-        git: 'www.github.com'
+        git: 'https://github.com/juliolecy/bank-app'
     },
     { id:3,
         title:'To do',
@@ -40,7 +40,7 @@ export const ProjectsArray: Array<Projects> = [
         img: `${Crud}`,
         tech: ['Javascript', 'React', 'Typescript'],
         description: 'Lista de tarefas',
-        git: 'www.github.com'
+        git: 'https://github.com/juliolecy/To-do-list'
     },
     {
         id:4,
@@ -49,7 +49,7 @@ export const ProjectsArray: Array<Projects> = [
         img:`${CRF}`,
         tech: ['FramerMotion', 'React'],
         description: "Página feita utilizando o Flamengo como tema, objetivo de treinar a utilização da biblioteca Framer Motion",
-        git: 'www.github.com'
+        git: 'https://github.com/juliolecy/flamengo-page-transitions'
 
     }
 
