@@ -30,7 +30,7 @@ const Contact = () => {
     <k.Container>
             <k.Title data-aos="fade-down">Contact me</k.Title>
 
-        <k.Glass>
+        <k.Glass data-aos="fade-up">
                 <k.ContactOptions>
                     <k.ContactOption>
                         <k.To href='mailto:juliocesar_19@hotmail.com.br' target='_blank'><MdOutlineEmail size={30}/></k.To>

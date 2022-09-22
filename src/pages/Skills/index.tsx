@@ -29,7 +29,7 @@ const Skills = () => {
 
                 <k.Title data-aos="fade-down">My Skills</k.Title>
 
-                <k.Glass>
+                <k.Glass data-aos="fade-up">
 
                     <Swiper style={{ width: '80%' }}
                         breakpoints={{

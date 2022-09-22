@@ -27,7 +27,7 @@ const Projects = () => {
     <k.Container>
         <k.Title data-aos="fade-down">Projects</k.Title>
 
-        <k.Glass>
+        <k.Glass data-aos="fade-up">
         <Swiper style={{width: '80%'}}
             spaceBetween={25}
             centeredSlides={true}

@@ -25,7 +25,7 @@ const About = () => {
             About me
         </k.Title>
 
-        <k.Glass>
+        <k.Glass data-aos="fade-up">
 
                 <k.ProfileContainer>
                   <k.ProfileImage src={profile}/>
