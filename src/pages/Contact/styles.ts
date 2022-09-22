@@ -1,81 +1,53 @@
 import styled from 'styled-components'
 import img from '../../assets/images/img2.jpg'
 
-export const VideoContainer = styled.div`
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
+export const Container = styled.div`
+position: relative;
 width: 100%;
-height: 100%;
-`
-
-export const VideoBg = styled.video`
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  background: #232a34;
-`
-
-export const ContactContainer = styled.div`
-
+height: 100vh;
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-color: white; 
-width: 100%;
-height: 100vh;
-position: relative;
+color: #fff;
+`
 
+export const Title = styled.h1`
+font-family: 'Montserrat', sans-serif;
+font-weight: normal;
+color: #fff;
+font-size: 3rem;
+text-shadow: 1px 1px 1px #919191,
+1px 2px 1px #919191,
+1px 3px 1px #919191,
+1px 4px 1px #919191,
+1px 5px 1px #919191,
+1px 6px 1px #919191,
+1px 7px 1px #919191;
+margin-bottom: 20px;
 
+@media screen and (max-width:600px){
+      font-size: 2rem;
+    }
+
+    @media screen and (max-width:360px){
+      font-size: 1.7rem;
+    }
 `
 
 export const Glass = styled.div`
 width: 90%;
-height: 500px;
-padding: 15px 15px;
-backdrop-filter: blur(5px) ;
+height: max-content;
+padding: 15px;
+backdrop-filter: blur(3px) ;
 -webkit-backdrop-filter: blur(5px);
 font-family:  'Montserrat', sans-serif;
-color: white;
+color: #fff;
 display: flex;
 justify-content: center;
-flex-direction: column;
+flex-direction: row;
 align-items: center;
-`
-export const Text = styled.div`
-    display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-text-align: center;
-font-family: 'Montserrat', sans-serif;
-margin-bottom: 30px;
-
-`
-export const TextOne = styled.h1`
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-`
-export const TextTwo = styled.span`
-font-size: 1.5rem;
-`
-export const ContactContainer2 = styled.div`
-max-width: 100%;
-width: 100%;
-height: 80%;
-display: grid;
-grid-template-columns: 1fr 2fr;
-gap: 6%;
-padding: 15px 35px;
-
-    @media screen and (max-width: 768px){
-        grid-template-columns: 1fr;
-    }
- 
+gap: 1.2rem;
 `
 
 export const ContactOptions = styled.div`
@@ -89,6 +61,16 @@ justify-content: center;
         display: none;
     }
 `
+
+export const To = styled.a`
+font-size: 1rem;
+display: inline-block;
+margin-top: 10px;
+text-decoration: none;
+outline: none;
+color: white;
+`
+
 export const ContactOption = styled.div`
 width: 100%;
 display: flex;
@@ -104,33 +86,41 @@ color: white;
 background: transparent;
 transition: .5s;
 border: 1px solid white;
+position:relative;
 
     &:hover{
-        background: transparent;
-        cursor: pointer;
+
+        ${To} svg{
+            color: #00FFFF;
+        }
+
+    cursor: pointer;
+    }
+
+    &:before{
+    border-radius: 12px;
+    transition: .5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: #ffffff;
+    }
+
+    &:hover:before{
+    transition: all ease .5s;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
     }
 `
-export const Title = styled.h2`
-font-size: 1.3rem;
-`
-export const Name = styled.span`
-font-size: 1rem;
-font-weight: bolder;
-margin-bottom: 10px;
 
- @media screen and (max-width: 1999px){
-        font-size: .9rem;
-    }
-`
 
-export const To = styled.a`
-font-size: 1rem;
-display: inline-block;
-margin-top: 10px;
-text-decoration: none;
-outline: none;
-color: white;
-`
+
 
 export const Form = styled.form`
 width: 100%;
@@ -144,7 +134,7 @@ gap: 1.2rem;
 `
 export const Input = styled.input`
 width: 100%;
-padding: 1.5rem;
+padding: 1rem;
 border-radius: 15px;
 background: transparent;
 border: 2px solid white;
@@ -153,7 +143,7 @@ color:white;
 `
 export const Textarea= styled.textarea`
 width: 100%;
-padding: 1.5rem;
+padding: 1rem;
 border-radius: 15px;
 background: transparent;
 border: 2px solid white;
@@ -163,20 +153,20 @@ color:white;
 export const Button = styled.button`
 cursor: pointer;
 width: 150px;
-    height: 50px;
-    border: none;
-    color: #fff;
-    transition: ease-out .3s;
-    font-size: 1.2rem;
-    outline: none;
-    border: 3px solid #ffffff;
-    position: relative;
-    z-index: 1;
-    background: transparent;
+height: 50px;
+border: none;
+color: #fff;
+transition: ease-out .3s;
+font-size: 1.2rem;
+outline: none;
+border: 3px solid #ffffff;
+position: relative;
+z-index: 1;
+background: transparent;
 
     &:hover{
-        cursor: pointer;
-    color: black;  
+    cursor: pointer;
+    color: black;
     }
 
     &:before{

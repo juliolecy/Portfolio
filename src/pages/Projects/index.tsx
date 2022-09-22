@@ -1,27 +1,31 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import * as k from './styles'
 import {motion} from 'framer-motion'
 import { ProjectsArray } from '../../constants/Projects/projects'
-import { Swiper, SwiperSlide } from "swiper/react";
 import {FiGithub} from 'react-icons/fi'
 import {MdComputer} from 'react-icons/md'
-// Import Swiper styles
+//Swiper
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-
-
-// import required modules
 import { Navigation, Pagination, Autoplay } from "swiper";
+//Aos
+import useAOS from "../../effects/useAos.js";
 
 const Projects = () => {
+
+    useEffect(() => {
+        useAOS({ duration: 2000 })
+    }, [])
+
   return (
     <motion.div
-    initial={{opacity:0}}
-    animate={{opacity:1}}
-    exit={{opacity:0}}
+    initial={{width:0}}
+   animate={{width:'100%'}}
+   exit={{x: window.innerWidth, transition: {duration:0.4}}}
     >
     <k.Container>
-        <k.Title data-aos="fade-up">Projects</k.Title>
+        <k.Title data-aos="fade-down">Projects</k.Title>
 
         <k.Glass>
         <Swiper style={{width: '80%'}}

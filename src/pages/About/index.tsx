@@ -1,21 +1,27 @@
-import React from 'react'
-import {motion} from 'framer-motion'
-import profile from '../../assets/images/profile.png'
-//import {TiSocialLinkedinCircular} from 'react-icons/ti'
-//import {AiFillGithub} from 'react-icons/ai'
+import React, {useEffect} from 'react'
 import * as k from './styles';
+import profile from '../../assets/images/profile.png'
+//FramerMotion
+import {motion} from 'framer-motion'
+//Aos
+import useAOS from "../../effects/useAos.js";
 
 const About = () => {
+
+     useEffect(() => {
+        useAOS({ duration: 2000 })
+    }, [])
+
   return (
     <motion.div
-    initial={{opacity:0}}
-    animate={{opacity:1}}
-    exit={{opacity:0}}
+    initial={{width:0}}
+   animate={{width:'100%'}}
+   exit={{x: window.innerWidth, transition: {duration:0.4}}}
     >
     <k.Container>
 
         <k.Title
-         data-aos="fade-up">
+         data-aos="fade-down">
             About me
         </k.Title>
 

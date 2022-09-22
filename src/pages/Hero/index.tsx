@@ -1,19 +1,26 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {motion} from 'framer-motion'
 import Cv from '../../assets/data/curriculo.pdf'
-import * as k from './HeroElements.js'
+import * as k from './styles.js'
 import Video from '../../assets/videos/VideoBg.mp4';
 import {TiSocialLinkedinCircular} from 'react-icons/ti'
 import {AiFillGithub} from 'react-icons/ai'
 import { FaBars } from "react-icons/fa";
+import useAOS from "../../effects/useAos.js";
 
-const  Hero= () => (
+const  Hero= () =>{
+
+    useEffect(() => {
+        useAOS({ duration: 2000 })
+    }, [])
+
+    return(
    <motion.div
-   initial={{opacity:0}}
-   animate={{opacity:1}}
-   exit={{opacity:0}}
+   initial={{width:0}}
+   animate={{width:'100%'}}
+   exit={{x: window.innerWidth, transition: {duration:0.4}}}
    >
-      <k.HeroContainer>
+      <k.HeroContainer data-aos="fade-up">
 
          <k.HeroContent>
             <k.HeroSpan>Hi</k.HeroSpan>
@@ -32,16 +39,16 @@ const  Hero= () => (
 
 
 
-         <k.SMContainer>
-                <k.SMLink href='https://www.linkedin.com/in/jlins/'> <TiSocialLinkedinCircular size={70} style={{color: '#fff'}} /></k.SMLink>
-                <k.SMLink href='https://github.com/juliolecy'><AiFillGithub size={60} style={{color: '#fff'}} /></k.SMLink>
-         </k.SMContainer>
-
       </k.HeroContainer>
+
+         <k.SMContainer>
+                <k.SMLink data-aos="fade-left"  data-aos-duration="2000" href='https://www.linkedin.com/in/jlins/'> <TiSocialLinkedinCircular size={70} style={{color: '#fff'}} /></k.SMLink>
+                <k.SMLink data-aos="fade-left"  data-aos-duration="3000" href='https://github.com/juliolecy'><AiFillGithub size={60} style={{color: '#fff'}} /></k.SMLink>
+         </k.SMContainer>
    </motion.div>
 
 
-);
+)}
 
 
 

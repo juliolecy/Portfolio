@@ -32,6 +32,7 @@ text-shadow: 1px 1px 1px #919191,
 1px 5px 1px #919191,
 1px 6px 1px #919191,
 1px 7px 1px #919191;
+margin-bottom: 20px;
 
 @media screen and (max-width:600px){
       font-size: 2rem;
@@ -43,8 +44,8 @@ text-shadow: 1px 1px 1px #919191,
 `
 export const Glass = styled.div`
 width: 90%;
-height: 500px;
-padding: 10px ;
+height:max-content;
+padding: 15px ;
 backdrop-filter: blur(3px) ;
 -webkit-backdrop-filter: blur(5px);
 font-family:  'Montserrat', sans-serif;
@@ -65,13 +66,11 @@ export const SwiperSlides = styled(SwiperSlide)`
 
 export const ProjectContainer=styled.div`
 width: 90%;
-
-height:400px;
+height:max-content;
 display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: row;
-margin-bottom: 80px;
 gap: 2rem;
 
 
