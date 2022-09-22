@@ -9,13 +9,13 @@ import {TbBrandTelegram} from 'react-icons/tb'
 
 const Contact = () => {
 
-    const form = useRef();
 
-  const sendEmail = (e) => {
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_f3fprlr', 'template_0i20kvo', form.current, '7m_mqpOURjjtEgYDd')
-            e.target.reset();
+    emailjs.sendForm('service_f3fprlr', 'template_0i20kvo',e.currentTarget, '7m_mqpOURjjtEgYDd')
+    e.currentTarget.reset();
   }
 
   return (
@@ -46,7 +46,7 @@ const Contact = () => {
                     </k.ContactOption>
 
                 </k.ContactOptions>
-                <k.Form ref={form} onSubmit={sendEmail}>
+                <k.Form onSubmit={sendEmail}>
                     <k.Input type='text' name='name' placeholder='Your name' required/>
                     <k.Input type='email' name='email' placeholder='Your email' required/>
                     <k.Textarea name="message"  rows={5} placeholder="Your message here"></k.Textarea>
