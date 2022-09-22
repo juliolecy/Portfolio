@@ -36,12 +36,12 @@ const Home = () => {
 
   return (
     <Router>
-         <k.Background>
-            <k.VideoBg autoPlay={true} loop muted src={Video}/>
-         </k.Background>
     <Sidebar Open={Open} toggle={toggle}/>
     <Navbar scrolled={scrolled} toggle={toggle}/>
-    <AnimatedRoutes/>
+         <k.Background>
+            <k.VideoBg autoPlay={true} loop muted src={Video}/>
+                <AnimatedRoutes/>
+         </k.Background>
     <Footer/>
     </Router>
   )
