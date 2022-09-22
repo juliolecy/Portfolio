@@ -5,11 +5,10 @@ display: flex;
 justify-content: center;
 align-items: center;
 padding: 0 3px;
-height: 100vh;
+height: 100%;
 position: relative;
 z-index: 1;
 overflow: hidden;
-margin-bottom: -80px;
 `
 
 export const HeroContent = styled.div`
