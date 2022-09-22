@@ -5,7 +5,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 padding: 0 3px;
-height: 100%;
+height: 100vh;
 position: relative;
 z-index: 1;
 overflow: hidden;
