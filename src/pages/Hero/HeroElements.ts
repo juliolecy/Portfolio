@@ -1,12 +1,11 @@
 import styled from 'styled-components';
 
 export const HeroContainer = styled.div`
-background: #0c0c0c;
 display: flex;
 justify-content: center;
 align-items: center;
 padding: 0 3px;
-height: 800px;
+height: 100vh;
 position: relative;
 z-index: 1;
 overflow: hidden;

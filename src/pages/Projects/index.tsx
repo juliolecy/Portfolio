@@ -1,41 +1,73 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React from 'react'
+import * as k from './styles'
 import {motion} from 'framer-motion'
-import {AiFillGithub} from 'react-icons/ai'
-import {HiOutlineExternalLink} from "react-icons/hi"
-import {TiArrowLeftOutline} from "react-icons/ti"
-import {TiArrowRightOutline} from "react-icons/ti"
-//Media
-import Video from '../../assets/videos/video2.mp4';
+import { ProjectsArray } from '../../constants/Projects/projects'
+import { Swiper, SwiperSlide } from "swiper/react";
+import {FiGithub} from 'react-icons/fi'
+import {MdComputer} from 'react-icons/md'
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
 
-//Components
-import * as k from './ProjectsElements.js'
+
+// import required modules
+import { Navigation, Pagination, Autoplay } from "swiper";
 
 const Projects = () => {
-
-
-
-
   return (
     <motion.div
     initial={{opacity:0}}
     animate={{opacity:1}}
     exit={{opacity:0}}
     >
+    <k.Container>
+        <k.Title data-aos="fade-up">Projects</k.Title>
 
-   <k.ProjectsContainer>
+        <k.Glass>
+        <Swiper style={{width: '80%'}}
+            spaceBetween={25}
+            centeredSlides={true}
+            slidesPerView={1}
+            slidesPerGroup= {1}
+            loop={true}
+            loopFillGroupWithBlank={true}
+            pagination={{
+            clickable: true,
+            }}
+            autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+            }}
 
-<k.Glass>
+            modules={[Pagination,  Autoplay]}
+            className="mySwiper"
+            >
+            {ProjectsArray.map((item)=>
+            <SwiperSlide key={item.id}>
+                <k.ProjectContainer>
+                    <k.Image src={item.img}/>
 
-      <k.TitleContainer>
-        <k.Title> My projects</k.Title>
-        <k.Description>These are some of the projects that I have developed</k.Description>
-      </k.TitleContainer>
+                    <k.ProjectsContent>
+                    <k.ProjectTitle>{item.title}</k.ProjectTitle>
+
+                    <k.Links>
+                        <a href={item.git}> <FiGithub
+                        /></a>
+                        <a  href={item.deploy}> <MdComputer/> </a>
+                    </k.Links>
+
+                    </k.ProjectsContent>
+                </k.ProjectContainer>
+            </SwiperSlide>)}
+        </Swiper>
+    </k.Glass>
+
+    </k.Container>
 
 
-</k.Glass>
-   </k.ProjectsContainer>
+
    </motion.div>
-  )
+   )
 }
 
-export default Projects
+export default Projects;

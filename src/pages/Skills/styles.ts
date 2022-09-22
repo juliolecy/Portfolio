@@ -70,17 +70,4 @@ width: 80px;
 height: 80px;
 `
 
-export const ButtonContainer = styled.div`
-position: absolute;
-width: 200px;
-height: 60px;
-bottom: 10%;
 
-a{
-    text-decoration: none;
-}
-
-@media screen and (max-width: 668px){
-    bottom: 7rem;
-}
-`
