@@ -13,7 +13,7 @@ export const Nav = styled.header<Props>`
     justify-content: center;
     align-items: center;
     font-size: 1rem;
-    position: fixed;
+    position: sticky;
     top: 0;
     z-index: 999999;
     transition: .8s all ease;
