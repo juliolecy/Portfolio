@@ -9,6 +9,7 @@ height: 100vh;
 position: relative;
 z-index: 1;
 overflow: hidden;
+margin-bottom: -80px;
 `
 
 export const HeroContent = styled.div`
