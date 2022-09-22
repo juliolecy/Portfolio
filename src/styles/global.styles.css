@@ -13,14 +13,14 @@ html{
 }
 
 html, body{
-    height: 100vh;
-   
-     
+    height: 100%;
+
+
 }
 
 body{
     font-size: 1.6rem;
     overflow-x: hidden;
-   
+
 }
 
