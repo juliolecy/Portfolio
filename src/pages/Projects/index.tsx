@@ -55,9 +55,9 @@ const Projects = () => {
                     <k.ProjectTitle>{item.title}</k.ProjectTitle>
 
                     <k.Links>
-                        <a href={item.git}> <FiGithub
+                        <a  href={item.git} target='_blank'  rel="noreferrer"> <FiGithub
                         /></a>
-                        <a  href={item.deploy}> <MdComputer/> </a>
+                        <a  href={item.deploy}  target='_blank'  rel="noreferrer"> <MdComputer/> </a>
                     </k.Links>
 
                     </k.ProjectsContent>
