@@ -14,7 +14,7 @@
 
 
   <p align="center">
-Este é meu portfólio pessoal onde me aprensento, assim como, também, os meus projetos e habilidades.
+Este é meu portfólio.
 </p>
 
   <a>
